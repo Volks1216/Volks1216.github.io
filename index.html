@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    
+    <p id="demo"></p>
 
     <header>
         <div class="wrapper">
@@ -34,7 +36,7 @@
         <div class="banner_info">
             <h3><small class="c_orange">Where Creativity </small> Meets Code:<span>Redefining <q class="c_red">with AI</q></span></h3>
             <p>Welcome to AI Art, where art meets artificial intelligence! Explore a new frontier in creativity with our AI-generated artworks, pushing the boundaries of traditional artistry and redefining what's possible in the world of creativity.</p>
-            <a href="about.html">About Us</a>
+            <a href="./links/about.html">About Us</a>
         </div>
     </div>
 
@@ -50,7 +52,7 @@
                         <img src="./images/amfermy_A_striking_painting_that_visually_represents_the_theme__b7453db2-cb92-4a23-aefc-ed927fa43ab6-1024x574.png" alt="AI Art 1">
                     </figure>
                     <h3>Art1</h3>
-                    <p><strong>Artificial Intelligence</strong> (AI) has been making waves across various industries, and the realm of art is no exception. With AI technology becoming more sophisticated, it's now capable of creating stunning artworks that rival those produced by human artists. However, this AI art revolution has sparked a debate within the creative community: is AI empowering or endangering the creative industries?</p>
+                    <p><strong>Artificial Intelligence</strong> (AI) has been making waves across various industries, and the realm of is no exception. With AI technology becoming more sophisticated, it's now capable of creating stunning artworks that rival those produced by human artists. However, this AI art revolution has sparked a debate within the creative community: is AI empowering or endangering the creative industries?</p>
                     <a href="https://creativerevolution.io/the-ai-art-revolution-empowering-or-endangering-the-creative-industries/">Read More!</a>
                 </section>
 
@@ -89,6 +91,11 @@
             </figure>
         </a>
     </div>
+
+    <script>
+        const nodeList = document.querySelectorAll("img");
+        document.getElementById("demo").innerHTML = nodeList.length;
+    </script>
 
 </body>
 </html>
