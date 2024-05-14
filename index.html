@@ -8,16 +8,13 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-
     <p id="demo"></p>
-
     <header>
         <div class="wrapper">
             <h2>My <span>Website</span></h2>
         </div>
     </header>
     <hr>
-
     <nav id="navigation">
         <div class="wrapper">
             <ul>
@@ -28,7 +25,6 @@
             </ul>
         </div>
     </nav>
-
     <div id="banner">
         <figure>
             <img src="https://fdc-inc.com/wp-content/uploads/2023/08/Buildings-1.jpg" alt="Building">
@@ -39,41 +35,40 @@
             <a href="./links/about.html">About Us</a>
         </div>
     </div>
-
     <div id="Services_con" class="Services" style="background-color: beige;">
-
         <div class="wrapper">
-
             <h3 class="t_center">Sample AI Art</h3>
-
             <div class="service_boxes">
                 <section class="t_center">
                     <figure>
                         <img src="./images/amfermy_A_striking_painting_that_visually_represents_the_theme__b7453db2-cb92-4a23-aefc-ed927fa43ab6-1024x574.png" alt="AI Art 1">
                     </figure>
                     <h3>Art1</h3>
-                    <p><strong>Artificial Intelligence</strong> (AI) has been making waves across various industries, and the realm of is no exception. With AI technology becoming more sophisticated, it's now capable of creating stunning artworks that rival those produced by human artists. However, this AI art revolution has sparked a debate within the creative community: is AI empowering or endangering the creative industries?</p>
-                    <a href="https://creativerevolution.io/the-ai-art-revolution-empowering-or-endangering-the-creative-industries/">Read More!</a>
+                    <p id="sparo"><strong>Artificial Intelligence</strong> (AI) has been making waves across various industries, and the realm of is no exception. With AI technology becoming more sophisticated, it's now capable of creating stunning artworks that rival those produced by human artists. However, this AI art revolution has sparked a debate within the creative community: is AI empowering or endangering the creative industries?</p>
+                    <p id="sparoh"><strong>Artificial Intelligence</strong> (AI) has been making waves across various industries, and the realm of is no exception. With AI technology becoming more sophisticated, it's now capable of creating stunning artworks that rival those produced by human artists. However, this AI art revolution has sparked a debate within the creative community: is AI empowering or endangering the creative industries?</p>
+                    <p id="spar"></p>
+                    <button id="sbtnrm">Read More!</button>
+                    <button id="sbtnrms">Read More!</button>
+                    <button id="sbtnrl">Read Less!</button>
                 </section>
-
                 <section class="t_center">
                     <figure>
                         <img src="./images/download.jpg" alt="AI Art 2">
                     </figure>
                     <h3>Art2</h3>
-                    <p><strong>Exploring the World of AI Art</strong>
-
+                    <p id="sparo1"><strong>Exploring the World of AI Art</strong>
                         In recent years, Artificial Intelligence (AI) has been revolutionizing the world of art, offering new possibilities for creativity, expression, and innovation. But what exactly is AI art, and how is it changing the way we think about artistic creation?
                         At its core, AI art refers to artworks created with the assistance of artificial intelligence technology.</p>
-                    <a href="https://www.adobe.com/products/firefly/discover/what-is-ai-art.html">Read more!</a>
+                    <p id="spar1"></p>
+                    <button id="sbtnrm1">Read more!</button>
+                    <button id="sbtnrms1">Read More!</button>
+                    <button id="sbtnrl1">Read Less!</button>
                 </section>
             </div>
-
         </div>
     </div>
     <hr>
     <footer id="main_footer" class="t_center" style="color: white;">AI Art Creations © AI Artz - Empowering Creativity through Artificial Intelligence.</footer>
-
     <div class="social_media">
         <a href="https://www.facebook.com/">
             <figure>
@@ -91,11 +86,58 @@
             </figure>
         </a>
     </div>
-
+    <script src="./js/jq.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#sbtnrms").hide();
+            $("#sparoh").hide();
+            $("#sbtnrl").hide();
+            $("#sbtnrm").click(function() {
+                $("#spar").append("Artificial Intelligence (AI) has been making waves across various industries, and the realm of is no exception. With AI technology becoming more sophisticated, it's now capable of creating stunning artworks that rival those produced by human artists. However, this AI art revolution has sparked a debate within the creative community: is AI empowering or endangering the creative industries?");
+                var result = $("#spar").text().length + $("#sparo").text().length;
+                if (result > $("#spar").text().length) {
+                    $("#sbtnrm").hide();
+                    $("#sbtnrl").show();
+                    $("#sbtnrl").off("click").on("click", function() {
+                        $("#spar").toggle();
+                        $("#sbtnrl").hide();
+                        $("#sbtnrms").show();
+                    });
+                    $("#sbtnrms").off("click").on("click", function() {
+                        $("#spar").toggle();
+                        $("#sbtnrms").hide();
+                        $("#sbtnrl").show();
+                    });
+                }
+            });
+        });
+        $(document).ready(function() {
+            $("#sbtnrms1").hide();
+            $("#sparoh1").hide();
+            $("#sbtnrl1").hide();
+            $("#sbtnrm1").click(function() {
+                $("#spar1").append("Artificial Intelligence (AI) has been making waves across various industries, and the realm of is no exception. With AI technology becoming more sophisticated, it's now capable of creating stunning artworks that rival those produced by human artists. However, this AI art revolution has sparked a debate within the creative community: is AI empowering or endangering the creative industries?");
+                var result = $("#spar1").text().length + $("#sparo1").text().length;
+                if (result > $("#spar1").text().length) {
+                    $("#sbtnrm1").hide();
+                    $("#sbtnrl1").show();
+                    $("#sbtnrl1").off("click").on("click", function() {
+                        $("#spar1").toggle();
+                        $("#sbtnrl1").hide();
+                        $("#sbtnrms1").show();
+                    });
+                    $("#sbtnrms1").off("click").on("click", function() {
+                        $("#spar1").toggle();
+                        $("#sbtnrms1").hide();
+                        $("#sbtnrl1").show();
+                    });
+                }
+            });
+        });
+    </script>
     <script>
         const nodeList = document.querySelectorAll("img");
         alert("total image/s found: "+nodeList.length);
     </script>
-
 </body>
 </html>

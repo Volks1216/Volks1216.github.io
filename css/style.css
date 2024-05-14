@@ -175,7 +175,7 @@ header h2 span {
 
 .service_boxes section p {}
 
-.service_boxes section a {
+.service_boxes section button {
     display: block;
     width: 110px;
     background: orange;
