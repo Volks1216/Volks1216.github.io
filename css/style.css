@@ -80,6 +80,14 @@ header h2 span {
 	overflow: hidden;
 	position: relative;
 }
+#banner1 {
+	overflow: hidden;
+	position: relative;
+}
+#banner2 {
+	overflow: hidden;
+	position: relative;
+}
 
 #banner::before {
 	content: "";
